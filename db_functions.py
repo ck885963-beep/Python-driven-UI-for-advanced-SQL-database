@@ -7,7 +7,9 @@ def connect_to_db():
     port =  st.secrets["mysql"]["port"],
     user = st.secrets["mysql"]["user"],
     password = st.secrets["mysql"]["password"],
-    database = st.secrets["mysql"]["database"]
+    database = st.secrets["mysql"]["database"],
+    ssl_ca = "ca.pem",       # Points to the certificate you uploaded
+    ssl_disabled = False     # Forces the secure connection
 )
 
 
